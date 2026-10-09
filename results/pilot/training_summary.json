@@ -1,0 +1,75 @@
+{
+  "run": "pilot",
+  "model_file": "models/pilot_cat_dog_mobilenetv2.keras",
+  "selected_stage": "stage 2 (fine-tuned)",
+  "selection_rule": "lowest validation loss over the best epoch of each stage; test set not used",
+  "stage1": {
+    "best_epoch": 2,
+    "epochs_run": 2,
+    "val_loss": 0.05932962894439697,
+    "val_accuracy": 0.9816666841506958,
+    "train_accuracy_at_best": 0.9683333039283752,
+    "train_loss_at_best": 0.09175524115562439,
+    "seconds_this_session": 147
+  },
+  "stage2": {
+    "best_epoch": 1,
+    "epochs_run": 1,
+    "val_loss": 0.04991568997502327,
+    "val_accuracy": 0.9800000190734863,
+    "train_accuracy_at_best": 0.9645833373069763,
+    "train_loss_at_best": 0.09362979978322983,
+    "seconds_this_session": 85
+  },
+  "config": {
+    "image_size": 224,
+    "batch_size": 32,
+    "dropout": 0.2,
+    "optimizer": "Adam",
+    "loss": "BinaryCrossentropy",
+    "lr_head": 0.001,
+    "lr_finetune": 5e-05,
+    "epochs_head_max": 2,
+    "epochs_finetune_max": 1,
+    "early_stopping_patience": 2,
+    "fine_tune_from": "block_13_expand",
+    "backbone_layers": 154,
+    "backbone_trainable_stage2": 25,
+    "seed": 42,
+    "per_class": 1500,
+    "test_per_class": 500,
+    "augmentation": "horizontal flip, rotation 0.04 turn (~14 deg), zoom 10%, translation 5% (training only)"
+  },
+  "split_sizes": {
+    "train": 2400,
+    "val": 600,
+    "test": 1000
+  },
+  "class_counts": {
+    "train": {
+      "cat": 1200,
+      "dog": 1200
+    },
+    "val": {
+      "cat": 300,
+      "dog": 300
+    },
+    "test": {
+      "cat": 500,
+      "dog": 500
+    }
+  },
+  "weight_source": "local file /home/claude/w/mnv2_notop.h5",
+  "total_params": 2259265,
+  "environment": {
+    "python": "3.13.16",
+    "tensorflow": "2.21.0",
+    "keras": "3.15.1",
+    "numpy": "2.5.3",
+    "platform": "Linux-6.18.44-fc-v80-x86_64-with-glibc2.39",
+    "gpu": false,
+    "cpu_cores": 2
+  },
+  "wall_clock_seconds_this_session": 244,
+  "note": "seconds_* only count training done in this session if the run was resumed"
+}

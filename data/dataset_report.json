@@ -1,0 +1,72 @@
+{
+  "source": "/home/claude/raw_ds/data",
+  "seed": 42,
+  "limit_per_class": 0,
+  "splits": {
+    "train": {
+      "cat": {
+        "found": 10000,
+        "kept": 9998
+      },
+      "dog": {
+        "found": 9989,
+        "kept": 9989
+      }
+    },
+    "test": {
+      "cat": {
+        "found": 2500,
+        "kept": 2499
+      },
+      "dog": {
+        "found": 2500,
+        "kept": 2498
+      }
+    }
+  },
+  "corrupt_files": [],
+  "duplicates_removed": [
+    {
+      "file": "train/cat/cat.2339.jpg",
+      "same_as": "train/cat/cat.12408.jpg"
+    },
+    {
+      "file": "train/cat/cat.6204.jpg",
+      "same_as": "train/cat/cat.6143.jpg"
+    },
+    {
+      "file": "test/cat/cat.3345.jpg",
+      "same_as": "test/cat/cat.10360.jpg"
+    },
+    {
+      "file": "test/dog/dog.10401.jpg",
+      "same_as": "train/dog/dog.2877.jpg"
+    },
+    {
+      "file": "test/dog/dog.2027.jpg",
+      "same_as": "train/dog/dog.3082.jpg"
+    }
+  ],
+  "modes": {
+    "RGB": 24984
+  },
+  "n_images_kept": 24984,
+  "width": {
+    "min": 42,
+    "max": 1050,
+    "mean": 404.2,
+    "median": 447.0
+  },
+  "height": {
+    "min": 32,
+    "max": 768,
+    "mean": 360.6,
+    "median": 374.0
+  },
+  "n_corrupt": 0,
+  "n_duplicates_removed": 5,
+  "leakage_check": {
+    "files_on_disk": 24984,
+    "hash_collisions_across_files": 0
+  }
+}

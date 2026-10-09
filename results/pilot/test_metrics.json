@@ -1,0 +1,99 @@
+{
+  "n": 1000,
+  "accuracy": 0.972,
+  "precision_dog": 0.946969696969697,
+  "recall_dog": 1.0,
+  "f1_dog": 0.9727626459143969,
+  "macro_f1": 0.9719780307761285,
+  "roc_auc": 0.999228,
+  "confusion_matrix": [
+    [
+      472,
+      28
+    ],
+    [
+      0,
+      500
+    ]
+  ],
+  "classification_report": {
+    "cat": {
+      "precision": 1.0,
+      "recall": 0.944,
+      "f1-score": 0.9711934156378601,
+      "support": 500.0
+    },
+    "dog": {
+      "precision": 0.946969696969697,
+      "recall": 1.0,
+      "f1-score": 0.9727626459143969,
+      "support": 500.0
+    },
+    "accuracy": 0.972,
+    "macro avg": {
+      "precision": 0.9734848484848485,
+      "recall": 0.972,
+      "f1-score": 0.9719780307761285,
+      "support": 1000.0
+    },
+    "weighted avg": {
+      "precision": 0.9734848484848485,
+      "recall": 0.972,
+      "f1-score": 0.9719780307761284,
+      "support": 1000.0
+    }
+  },
+  "n_errors": 28,
+  "latency_ms_per_image_batch1": 33.8,
+  "run": "pilot",
+  "model_file": "models/pilot_cat_dog_mobilenetv2.keras",
+  "selected_stage": "stage 2 (fine-tuned)",
+  "test_class_counts": {
+    "cat": 500,
+    "dog": 500
+  },
+  "threshold": 0.5,
+  "positive_class": "dog",
+  "stage_comparison_test_reporting_only": {
+    "stage1": {
+      "n": 1000,
+      "accuracy": 0.98,
+      "precision_dog": 0.9838709677419355,
+      "recall_dog": 0.976,
+      "f1_dog": 0.9799196787148594,
+      "macro_f1": 0.9799996799948799,
+      "roc_auc": 0.998884,
+      "confusion_matrix": [
+        [
+          492,
+          8
+        ],
+        [
+          12,
+          488
+        ]
+      ],
+      "n_errors": 20
+    },
+    "stage2": {
+      "n": 1000,
+      "accuracy": 0.972,
+      "precision_dog": 0.946969696969697,
+      "recall_dog": 1.0,
+      "f1_dog": 0.9727626459143969,
+      "macro_f1": 0.9719780307761285,
+      "roc_auc": 0.999228,
+      "confusion_matrix": [
+        [
+          472,
+          28
+        ],
+        [
+          0,
+          500
+        ]
+      ],
+      "n_errors": 28
+    }
+  }
+}
