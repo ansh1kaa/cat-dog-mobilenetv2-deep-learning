@@ -57,7 +57,7 @@ else:
         res = predict_image(model, image)
     left, right = st.columns(2, gap="large")
     with left:
-        st.image(image.convert("RGB"), caption=f"Uploaded image ({image.size[0]}x{image.size[1]} px)", use_container_width=True)
+        st.image(image.convert("RGB"), caption=f"Uploaded image ({image.size[0]}x{image.size[1]} px)", use_column_width=True)
     with right:
         color = "#2F6DB5" if res["label"] == "DOG" else "#E07B39"
         st.markdown(f"""
